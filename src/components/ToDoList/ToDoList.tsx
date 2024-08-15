@@ -59,6 +59,15 @@ export default function ToDoList() {
     setCurrentToDo(null)
   }
 
+  const deleteToDo = (id: string) => {
+    setTodos((prev) => {
+      return prev.filter((todo) => todo.id !== id)
+    })
+    if (currentToDo && currentToDo.id === id) {
+      setCurrentToDo(null)
+    }
+  }
+
   return (
     <div className={styles.toDoList}>
       <div className={styles.toDoListContainer}>
@@ -68,6 +77,7 @@ export default function ToDoList() {
           handleDoneToDo={handleDoneToDo}
           startEditToDo={startEditToDo}
           editToDo={editToDo}
+          deleteToDo={deleteToDo}
         />
         <TaskList
           doneTaskList
@@ -75,6 +85,7 @@ export default function ToDoList() {
           handleDoneToDo={handleDoneToDo}
           startEditToDo={startEditToDo}
           editToDo={editToDo}
+          deleteToDo={deleteToDo}
         />
       </div>
     </div>
