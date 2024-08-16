@@ -98,7 +98,6 @@ export default function ToDoList() {
           todos={unDoneTodos}
           handleDoneToDo={handleDoneToDo}
           startEditToDo={startEditToDo}
-          editToDo={editToDo}
           deleteToDo={deleteToDo}
         />
         <TaskList
@@ -106,7 +105,6 @@ export default function ToDoList() {
           todos={doneTodos}
           handleDoneToDo={handleDoneToDo}
           startEditToDo={startEditToDo}
-          editToDo={editToDo}
           deleteToDo={deleteToDo}
         />
       </div>
